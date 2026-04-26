@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>hai yen - Mini Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+        .calc-container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 320px;
+        }
+        table {
+            width: 100%;
+        }
+        h2 {
+            margin-top: 0;
+            color: #1a73e8;
+            font-size: 22px;
+            text-transform: uppercase;
+        }
+        td {
+            padding: 8px 5px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[readonly] {
+            background-color: #e9ecef;
+            font-weight: bold;
+        }
+        input[type="button"] {
+            width: 120px;
+            padding: 10px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        input[type="button"]:hover {
+            background-color: #1557b0;
+        }
+    </style>
+
+    <script language="javascript">
+        function calculate() {
+            var a = document.frmCal.txta;
+            var b = document.frmCal.txtb;
+            var o = document.frmCal.slto;
+            var r = document.frmCal.txtr;
+
+            var numberFormat = /^[+-]?\d+(\.\d+)?$/;
+
+            if (numberFormat.test(a.value) == false) {
+                alert("a must be a number!");
+                a.focus();
+            } 
+            else if (numberFormat.test(b.value) == false) {
+                alert("b must be a number!");
+                b.focus();
+            } 
+
+            else if ((o.value == "/" || o.value == "%") && parseFloat(b.value) == 0) {
+                alert("b can't be 0!");
+                r.value = "";
+                b.focus();
+            } 
+
+            else {
+                var expression = a.value + o.value + b.value;
+                r.value = eval(expression);
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="calc-container">
+    <form name="frmCal">
+        <table align="center">
+            <tr>
+                <td colspan="2" align="center">
+                    <h2>MINI CALCULATOR</h2>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">a =</td>
+                <td><input name="txta" type="text" placeholder="Nhập số a"></td>
+            </tr>
+            <tr>
+                <td align="right">b =</td>
+                <td><input name="txtb" type="text" placeholder="Nhập số b"></td>
+            </tr>
+            <tr>
+                <td align="right">Operator:</td>
+                <td>
+                    <select name="slto">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                        <option value="%">%</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Result:</td>
+                <td><input name="txtr" type="text" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" style="padding-top: 15px;">
+                    <input type="button" value="Calculate" onClick="calculate()">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>
