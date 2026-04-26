@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient Architecture</title>
+
+    <style>
+    body {
+        font-family: Roboto, sans-serif;
+        background: #e2d7aa;
+        color: #000000;
+        font-size: 16px;
+        width: 1180px;
+        line-height: 24px;
+        margin: 0 auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 60px;
+        font-family: 'Indie Flower', cursive;
+        letter-spacing: 5px;
+        text-align: center;
+        margin-top: 65px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    nav {
+        margin: 30px;
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 28px;
+        color: #000000;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        list-style: none;
+        display: inline;
+        padding: 0 12px;
+    }
+
+    nav ul li:first-of-type a,
+    nav ul li:last-of-type a {
+        padding-left: 0;
+        color: #0a2d4a;
+        font-weight: bold;
+    }
+
+    main {
+        margin-top: 30px;
+        flex: 1;
+    }
+
+    .main-banner {
+        width: 1180px;
+        height: 500px;
+        display: block;
+        margin: 0 auto 40px;
+        object-fit: cover;
+    }
+
+    section {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    article {
+        width: 370px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    article img {
+        width: 350px;
+        height: 200px;
+        margin-bottom: 20px;
+        object-fit: cover;
+    }
+
+    h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 14px;
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+
+    p {
+        width: 345px;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+
+    article img + p:first-letter {
+        text-transform: uppercase;
+        font-size: 40px;
+        font-family: serif;
+    }
+
+    .post-buttons {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .comments a,
+    .view-post a {
+        background: #8b6f2f;
+        color: #dcc157;
+        padding: 8px 14px;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        font-size: 13px;
+        border-radius: 3px;
+    }
+
+    .comments img {
+        width: 12px !important;
+        height: 12px !important;
+        object-fit: contain;
+        vertical-align: middle;
+        margin-right: 4px;
+    }
+
+    footer {
+        margin: 0;
+        padding: 20px 10px;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <nav id="topmenu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Ancient Architecture</h1>
+    </header>
+
+    <main>
+        <img class="main-banner" src="https://s2.glbimg.com/QlyMt9Ya3ACljQmnVVy9YAPBmTU=/1200x630/s.glbimg.com/jo/g1/f/original/2012/11/08/chichen-itza.jpg" alt="Ancient Architecture">
+
+        <section>
+            <article>
+                <header>
+                    <h2>Ancient Roman Architecture</h2>
+                </header>
+
+                <h3>Posted on 01.01.2017 by <a href="#">Someone</a></h3>
+
+                <img src="https://owa.bestprice.vn/images/destinations/uploads/dau-truong-la-ma-colosseum-602f687aee000.jpg" alt="Roman">
+
+                <p>
+                    Ancient Roman architecture adopted the external language of classical Greek architecture for the purposes of the ancient Romans, but grew so different from Greek buildings as to become a new architectural style. The two styles are often considered one body of classical architecture. Roman architecture flourished in the Roman Republic and even more so under the Empire, when the great majority of surviving buildings were constructed. It used new materials, particularly concrete, and newer technologies such as the arch and the dome to make buildings that were typically strong and well-engineered.
+                </p>
+
+                <div class="post-buttons">
+                    <span class="comments">
+                        <a href="#">
+                            <img src="https://media.istockphoto.com/id/1039656940/vector/dialog.jpg?s=170667a&w=0&k=20&c=5K5PJ5ROF2npQiFxhue9I4qsB3IV_h86-JHZH1uba1M=" width="15" height="15">
+                            COMMENTS
+                        </a>
+                    </span>
+
+                    <span class="view-post">
+                        <a href="#">VIEW POST</a>
+                    </span>
+                </div>
+            </article>
+
+            <article>
+                <header>
+                    <h2>Ancient Greek Architecture</h2>
+                </header>
+
+                <h3>Posted on 01.01.2017 by <a href="#">Someone</a></h3>
+
+                <img src="https://live.staticflickr.com/8311/8068130541_7b7197b575_b.jpg" alt="Greek">
+
+                <p>
+                    The architecture of ancient Greece is the architecture produced by the Greek-speaking people whose culture flourished on the Greek mainland, the Peloponnese, the Aegean Islands, and in colonies in Anatolia and Italy. Ancient Greek architecture is best known from its temples, many of which are found throughout the region, mostly as ruins but many substantially intact.
+                </p>
+
+                <div class="post-buttons">
+                    <span class="comments">
+                        <a href="#">
+                            <img src="https://media.istockphoto.com/id/1039656940/vector/dialog.jpg?s=170667a&w=0&k=20&c=5K5PJ5ROF2npQiFxhue9I4qsB3IV_h86-JHZH1uba1M=" width="15" height="15">
+                            COMMENTS
+                        </a>
+                    </span>
+
+                    <span class="view-post">
+                        <a href="#">VIEW POST</a>
+                    </span>
+                </div>
+            </article>
+
+            <article>
+                <header>
+                    <h2>Ancient Indian Architecture</h2>
+                </header>
+
+                <h3>Posted on 01.01.2017 by <a href="#">Someone</a></h3>
+
+                <img src="https://thumbs.dreamstime.com/b/greece-athens-june-view-parthenon-temple-archaeological-site-acropolis-hill-archaeological-site-acropolis-189130485.jpg" alt="Indian">
+
+                <p>
+                    Indian architecture is as old as the history of civilization. The earliest remains of recognizable building activity in India date back to the Indus Valley cities. Among India's ancient architectural remains, the most characteristic are the temples, Chaityas, Viharas, Stupas and other religious structures.
+                </p>
+
+                <div class="post-buttons">
+                    <span class="comments">
+                        <a href="#">
+                            <img src="https://media.istockphoto.com/id/1039656940/vector/dialog.jpg?s=170667a&w=0&k=20&c=5K5PJ5ROF2npQiFxhue9I4qsB3IV_h86-JHZH1uba1M=" width="15" height="15">
+                            0 COMMENTS
+                        </a>
+                    </span>
+
+                    <span class="view-post">
+                        <a href="#">VIEW POST</a>
+                    </span>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Posted by: Hai Yen</p>
+        <p>&copy; Copyright OldWorld by Anonymous. Photos by Anonymous</p>
+    </footer>
+</body>
+</html>
